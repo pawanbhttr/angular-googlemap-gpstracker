@@ -52,9 +52,21 @@ export class GpstrackerComponent implements OnInit, AfterViewInit {
           title: data[i].DriverName,
           map: this.map
         });
+        this.addMarkerInfo(marker,data[i]);
         this.mapMarker[data[i].IMEI] = marker;
       }
     }
     setTimeout(() => { this.getLocation(); }, 10000);
+  }
+  
+  addMarkerInfo(marker: google.maps.Marker, data: GPSLocation): void {
+
+    var infoWindow = new google.maps.InfoWindow({
+      content: data.DriverName + " (" + data.VehicleNo + ")"
+    });
+
+    google.maps.event.addListener(marker, 'click', () => {
+      infoWindow.open(this.map, marker);
+    });
   }
 }
