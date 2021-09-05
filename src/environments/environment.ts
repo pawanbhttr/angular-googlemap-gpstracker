@@ -3,7 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: 'AIzaSyDoCBv1sJE3e6tkRaBAmgprBF1cfwbPe9E',
+    authDomain: 'https://accounts.google.com/o/oauth2/auth',
+    projectId: 'gps-tracker-c5412'
+  }
 };
 
 /*
