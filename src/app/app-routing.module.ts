@@ -3,8 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { GpstrackerComponent } from './components/gpstracker/gpstracker.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'gps', pathMatch:'full' },
-  { path: 'gps', component: GpstrackerComponent }
+  { path: '', component: GpstrackerComponent }
 ];
 
 @NgModule({
