@@ -4,7 +4,12 @@
 
 export const environment = {
   production: false,
-  apiUrl: "http://schedular.upcodenepal.com"
+  apiUrl: "http://schedular.upcodenepal.com",
+  firebase: {
+    apiKey: 'AIzaSyDoCBv1sJE3e6tkRaBAmgprBF1cfwbPe9E',
+    authDomain: 'https://accounts.google.com/o/oauth2/auth',
+    projectId: 'gps-tracker-c5412'
+  }
 };
 
 /*
