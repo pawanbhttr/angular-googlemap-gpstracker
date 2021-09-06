@@ -4,7 +4,7 @@ import { GpstrackerComponent } from './components/gpstracker/gpstracker.componen
 import { RealtimetrackerComponent } from './components/realtimetracker/realtimetracker.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'gps', pathMatch:'full' },
+  { path: '', redirectTo: 'realtime', pathMatch:'full' },
   { path: 'gps', component: GpstrackerComponent },
   { path: 'realtime', component: RealtimetrackerComponent }
 ];

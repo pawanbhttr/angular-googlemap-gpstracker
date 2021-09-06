@@ -56,7 +56,7 @@ export class RealtimetrackerComponent implements OnInit, AfterViewInit {
   }
 
   onSnapshotInit(): void {
-    var q = query(collection(this.db, "acw"));
+    var q = query(collection(this.db, environment.clientCode));
     onSnapshot(q, (querySnapshot) => {
       querySnapshot.docChanges().forEach((changes) => {
         this.updateMarker({
