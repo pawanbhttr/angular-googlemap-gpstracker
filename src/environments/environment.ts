@@ -5,9 +5,9 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'AIzaSyDoCBv1sJE3e6tkRaBAmgprBF1cfwbPe9E',
+    apiKey: 'AIzaSyA30k_JTiRC15yMgO8Y1AjcvAiskV6dTGc',
     authDomain: 'https://accounts.google.com/o/oauth2/auth',
-    projectId: 'gps-tracker-c5412'
+    projectId: 'gps-tracker-27c95'
   }
 };
 
