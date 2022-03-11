@@ -91,7 +91,7 @@ export class RealtimetrackerComponent implements OnInit, AfterViewInit {
   addMarkerInfo(marker: google.maps.Marker, data: GPSLocation): void {
 
     var infoWindow = new google.maps.InfoWindow({
-      content: data.DriverName
+      content: "<div style='text-align:center;font-weight:bold;'>"+ data.DriverName + "<br/>" + data.VehicleNo + "<br/>" + data.MobileNo + "</div>"
     });
 
     google.maps.event.addListener(marker, 'click', () => {
