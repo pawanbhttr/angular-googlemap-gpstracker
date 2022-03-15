@@ -81,7 +81,8 @@ export class RealtimetrackerComponent implements OnInit, AfterViewInit {
         var marker = new google.maps.Marker({
           position: new google.maps.LatLng(data.Latitude, data.Longitude),
           title: data.DriverName,
-          map: this.map
+          map: this.map,
+          icon: "assets/icons/icons8-truck-48.png"
         });
         this.addMarkerInfo(marker,data);
         this.mapMarker[data.IMEI] = marker;
