@@ -4,7 +4,7 @@ import { environment } from '../../../environments/environment';
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, query, onSnapshot } from '@firebase/firestore';
 import { } from 'googlemaps';
-
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-realtimetracker',
@@ -20,8 +20,14 @@ export class RealtimetrackerComponent implements OnInit, AfterViewInit {
   
   app: any;
   db: any;
+  clientCode: any;
 
-  constructor() {
+  constructor(private route: ActivatedRoute) {
+
+    this.route.paramMap.subscribe(params=>{
+      this.clientCode = params.get("clientId");
+    });
+
     this.app = initializeApp(environment.firebase);
     this.db = getFirestore(this.app);
   }
@@ -56,7 +62,7 @@ export class RealtimetrackerComponent implements OnInit, AfterViewInit {
   }
 
   onSnapshotInit(): void {
-    var q = query(collection(this.db, environment.clientCode));
+    var q = query(collection(this.db, this.clientCode));
     onSnapshot(q, (querySnapshot) => {
       querySnapshot.docChanges().forEach((changes) => {
         this.updateMarker({

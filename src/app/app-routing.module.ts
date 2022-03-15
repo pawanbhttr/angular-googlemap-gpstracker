@@ -6,7 +6,7 @@ import { RealtimetrackerComponent } from './components/realtimetracker/realtimet
 const routes: Routes = [
   { path: '', redirectTo: 'realtime', pathMatch:'full' },
   { path: 'gps', component: GpstrackerComponent },
-  { path: 'realtime', component: RealtimetrackerComponent }
+  { path: 'realtime/:clientId', component: RealtimetrackerComponent }
 ];
 
 @NgModule({
